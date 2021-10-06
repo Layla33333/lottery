@@ -64,7 +64,7 @@ public class Shuffler {
     return Arrays.copyOfRange(data,data.length - drawSize, data.length);
   }
 
-  // TODO Create overloads of  both forms of shuffle (full and partial) for boolean[], byte[], short[], long[], char[], float[], Object[].
+
   
   private void shufflePart(int[] data, int drawSize) {
     for (int sourceIndex = data.length - 1; sourceIndex >= data.length - drawSize; sourceIndex--) {
@@ -92,7 +92,7 @@ public class Shuffler {
     for (int sourceIndex = data.length - 1; sourceIndex >= data.length - drawSize; sourceIndex--) {
       int destIndex = rng.nextInt(sourceIndex + 1);
       if (sourceIndex != destIndex) {
-        boolean temp = data[sourceIndex];
+        byte temp = data[sourceIndex];
         data[sourceIndex] = data[destIndex];
         data[destIndex] = temp;
       }
@@ -103,7 +103,7 @@ public class Shuffler {
     for (int sourceIndex = data.length - 1; sourceIndex >= data.length - drawSize; sourceIndex--) {
       int destIndex = rng.nextInt(sourceIndex + 1);
       if (sourceIndex != destIndex) {
-        boolean temp = data[sourceIndex];
+        char temp = data[sourceIndex];
         data[sourceIndex] = data[destIndex];
         data[destIndex] = temp;
       }
@@ -114,7 +114,7 @@ public class Shuffler {
     for (int sourceIndex = data.length - 1; sourceIndex >= data.length - drawSize; sourceIndex--) {
       int destIndex = rng.nextInt(sourceIndex + 1);
       if (sourceIndex != destIndex) {
-        boolean temp = data[sourceIndex];
+        short temp = data[sourceIndex];
         data[sourceIndex] = data[destIndex];
         data[destIndex] = temp;
       }
@@ -125,7 +125,7 @@ public class Shuffler {
     for (int sourceIndex = data.length - 1; sourceIndex >= data.length - drawSize; sourceIndex--) {
       int destIndex = rng.nextInt(sourceIndex + 1);
       if (sourceIndex != destIndex) {
-        boolean temp = data[sourceIndex];
+        long temp = data[sourceIndex];
         data[sourceIndex] = data[destIndex];
         data[destIndex] = temp;
       }
@@ -136,7 +136,7 @@ public class Shuffler {
     for (int sourceIndex = data.length - 1; sourceIndex >= data.length - drawSize; sourceIndex--) {
       int destIndex = rng.nextInt(sourceIndex + 1);
       if (sourceIndex != destIndex) {
-        boolean temp = data[sourceIndex];
+        float temp = data[sourceIndex];
         data[sourceIndex] = data[destIndex];
         data[destIndex] = temp;
       }
@@ -147,7 +147,7 @@ public class Shuffler {
     for (int sourceIndex = data.length - 1; sourceIndex >= data.length - drawSize; sourceIndex--) {
       int destIndex = rng.nextInt(sourceIndex + 1);
       if (sourceIndex != destIndex) {
-        boolean temp = data[sourceIndex];
+        Object temp = data[sourceIndex];
         data[sourceIndex] = data[destIndex];
         data[destIndex] = temp;
       }
@@ -165,5 +165,5 @@ public class Shuffler {
     }
   }
 
-  // TODO Creates overloads of shufflePart for boolean[], byte[], char[], short[], long[], float[], Object[].
+
 }
